@@ -47,7 +47,7 @@
 </head>
 
 <body>
-
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">UcanCode</a>
@@ -59,10 +59,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="about.html">About</a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="technology.html" id="navbarDropdown" role="button"
@@ -70,10 +70,9 @@
                             Technology
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">HTML</a></li>
-                            <li><a class="dropdown-item" href="#">CSS</a></li>
-                            <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                            <li><a class="dropdown-item" href="#">Web Development</a></li>
                             <li><a class="dropdown-item" href="#">Bootstrap</a></li>
+                            <li><a class="dropdown-item" href="#">JavaScript</a></li>
                             <li><a class="dropdown-item" href="#">Python</a></li>
                             <li><a class="dropdown-item" href="#">Java</a></li>
                             <li><a class="dropdown-item" href="#">C++</a></li>
@@ -90,12 +89,118 @@
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
+                <div class="mx-2">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Login
+                    </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">
+                        SignUp
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
 
+    <!-- Button trigger modal
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+    Launch static backdrop modal
+  </button> -->
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="loginLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginLabel">Login to UCanCode</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form style="text-align: left;">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <!-- this is for checked checkbox -->
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flecCheckChecked">Remember Me</label>
+                        </div>
+                        <!-- 
+                        <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                        </div> -->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button trigger modal
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">
+    Launch static backdrop modal
+  </button> -->
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signupModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Get a UCanCode Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body">
+                        <form style="text-align: left;">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3">
+                                <!-- to confirm your password we need to change the laber for to cexample everywhere  -->
+                                <label for="cexampleInputPassword1" class="form-label">Confirm Your Password</label>
+                                <input type="password" class="form-control" id="cexampleInputPassword1">
+                            </div>
+                            <!-- this is for checked checkbox -->
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flecCheckChecked">Remember Me</label>
+                            </div>
+                            <!-- 
+                            <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                            </div> -->
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Make A New Account </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <hr class="featurette-divider">
 
